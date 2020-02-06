@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [[ -x $HOME/.pyenv/versions/$(basename "$PYENV_VIRTUAL_ENV")/bin/cookiecutter ]]
+then
+    mkdir -p "$ANSIBLE_ROLES_PATH"
+    cd "$ANSIBLE_ROLES_PATH" || exit
+    cookiecutter "$1"
+else
+    echo "cookiecutter is not installed in this pyenv"
+fi
