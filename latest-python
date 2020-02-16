@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -x /usr/local/bin/pyenv ]; then
+    pyenv install --list | grep -vE "\-|rc" | \grep " 3\.[6789]" | tail -n 1 | awk '{$1=$1};1'
+else
+    echo "pyenv not installed"
+    echo "brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper"
+    exit 1
+fi
