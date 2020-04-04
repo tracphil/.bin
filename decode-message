@@ -6,7 +6,7 @@
 function decode-authorization-failure-message {
     if [ $# -ne 1 ] || [ "$1" = -h ] || [ "$1" = --help ]; then
         cat <<'EOT'
-Usage: decode-message.sh <message>
+Usage: decode-message <message>
 Use this when Amazon gives you an "Encoded authorization failure message" and
 you need to turn it into something readable.
 EOT
