@@ -14,7 +14,7 @@ Returns account number, region, account alias
 
 Prerequisite: `awscli`, `jq`
 
-Use when Amazon gives you an "Encoded authorization failure message" and you need to turn it into something readable.
+Use when Amazon gives you an _"Encoded authorization failure message"_ and you need to turn it into something readable.
 
 ## `latest-python`
 
