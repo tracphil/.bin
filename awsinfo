@@ -36,6 +36,14 @@ def region() -> str:
     return response
 
 
+def caller() -> str:
+    """Caller
+    """
+    response = STS_CLIENT.get_caller_identity()
+    whoami = response["UserId"]
+    return whoami
+
+
 # Make it pretty
 def main():
     """Return responses from above functions
@@ -46,6 +54,8 @@ def main():
     print("Account Number:  " + get_account_number)
     get_region = region()
     print("Region:          " + get_region)
+    get_caller = caller()
+    print("UserId:          " + get_caller)
 
 
 if __name__ == "__main__":
