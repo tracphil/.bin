@@ -8,6 +8,6 @@ if command -v pyenv; then
     echo "Installed Python $py_version"
 else
     echo "pyenv not installed"
-    echo "brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper"
+    echo "brew install pyenv pyenv-virtualenv"
     exit 1
 fi
