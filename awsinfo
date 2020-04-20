@@ -40,7 +40,9 @@ def caller() -> str:
     """Caller
     """
     response = STS_CLIENT.get_caller_identity()
-    whoami = response["UserId"]
+    arn = response["Arn"]
+    data = arn.split('/')
+    whoami = data[1] + "/" + data[2]
     return whoami
 
 
