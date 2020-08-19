@@ -50,14 +50,10 @@ def caller() -> str:
 def main():
     """Return responses from above functions
     """
-    get_account_alias = account_alias()
-    print("Account Alias:   " + get_account_alias)
-    get_account_number = account()
-    print("Account Number:  " + get_account_number)
-    get_region = region()
-    print("Region:          " + get_region)
-    get_caller = caller()
-    print("UserId:          " + get_caller)
+    print("Account Alias:   " + account_alias())
+    print("Account Number:  " + account())
+    print("Region:          " + region())
+    print("UserId:          " + caller())
 
 
 if __name__ == "__main__":
