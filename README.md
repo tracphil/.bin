@@ -21,3 +21,14 @@ Use when Amazon gives you an _"Encoded authorization failure message"_ and you n
 Prerequisite: `pyenv`
 
 Downloads, compiles and installs the latest python and sets global python version to use.
+
+## `smartcard`
+
+`99999` stands in for your PIV PIN
+ 
+* `pip install cryptography PyKCS11`
+* `python smartcard certs 999999`
+
+By inspection, choose which certificate to export. Then, run it again to export the certificate you wanted:
+
+`python smartcard.py openssh 999999 --cert 0`
