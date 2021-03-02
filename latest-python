@@ -8,6 +8,8 @@ if command -v pyenv; then
     echo "Installed Python $py_version"
 else
     echo "pyenv not installed"
+    echo "curl https://pyenv.run | bash"
+    echo "  or"
     echo "brew install pyenv pyenv-virtualenv"
     exit 1
 fi
